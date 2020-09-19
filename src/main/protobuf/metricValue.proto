@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "cn.betasoft.dp.metric.merge.protobuf";
+option java_outer_classname = "MetricsValueProto";
+
+message MetricValue {
+  string moType = 1;
+  string metricName = 2;
+  string moId = 3;
+  double metricValue = 4;
+  int64 sampleTime = 5;
+  map<string, string> metricTags = 6;
+}
